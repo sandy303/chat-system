@@ -7,6 +7,8 @@ class Conversation < ActiveRecord::Base
     
     validate_uniqueness_of :name
 
+    attr_accessor :messages_count
+
     scope :between, -> (sender_id, reciepient_id) do
         where ("conversation.sender_id = ? AND conversation.reciepient_id = ?)
         OR (conversation.sender_id = ? AND conversation.reciepient_id = ?)",
