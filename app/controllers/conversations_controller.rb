@@ -16,8 +16,7 @@ class ConversationsController < ActiveController
         else
             @conversation = Conversation.create!(conversation_Params)
             @user = User.find(params[:user_id])
-            @chat_count =  @user.increment(:chat_count) 
-            @user.chat_count = @chat_count
+            @user.increment_chats
         end
 
         # in both cases redirect to that conversation
