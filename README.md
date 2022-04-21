@@ -1,7 +1,7 @@
 # README
 
 
-chat system that allows creating new application for chatting for each user.
+chat system that allows creating new  chatting application for each user.
 
 
 To run the App :
