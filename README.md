@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+chat system that allows creating new application for chatting for each user.
 
-* Ruby version
 
-* System dependencies
+To run the App :
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. use command "rails s".
+2. you have to sign up for the first time, else you have to login.
+3. the app shows all the users in the system.
+4. enjoy your chatting !.
