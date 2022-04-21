@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   @@chat_count = 1
-  @@name
+  @@name = ""
 
   def increment_chats
     @@chat_count += 1

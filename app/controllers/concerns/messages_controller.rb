@@ -1,7 +1,7 @@
-class MessagesController < ActiveController
+class MessagesController < ApplicationController
 
     before_action do
-        @conversation = Coneversation.find(params[:conversation_id])
+        @conversation = Conversations.find(params[:conversation_id])
     end
     
     # get messages of this convesrsation

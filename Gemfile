@@ -10,8 +10,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-#gem "sqlite3", "~> 1.4"
-gem "mysql2"
+gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -28,11 +27,16 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# Device Token Auth Gem is a Token-based authentication for Rails JSON APIs.
-gem "devise"
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
+gem 'mysql2'
+
+# Devise Gem is a flexible user authentication used in Ruby on Rails-based applications
+gem 'devise'
+
+# Elasticsearch (ES) is a powerful Full Text Search Engine based on Apache Lucene.
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -62,7 +66,7 @@ group :development do
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
+  gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"

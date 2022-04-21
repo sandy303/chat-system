@@ -1,10 +1,10 @@
-class ConversationsController < ActiveController
+class ConversationsController < ApplicationController
     before_action :authenticate_user!
 
     # shows all conversations and users at index page  
     def index
         @users = User.all
-        @conversations =  Conversation.all
+        @conversation =  Conversation.all
     end
 
     def create
@@ -14,7 +14,7 @@ class ConversationsController < ActiveController
 
         # create new one    
         else
-            @conversation = Conversation.create!(conversation_Params)
+            @conversation = Conversation.create!(conversation_params)
             @user = User.find(params[:user_id])
             @user.increment_chats
         end
@@ -24,8 +24,8 @@ class ConversationsController < ActiveController
     end
 
    # search conversation body
-   def conversation_search
-        @search_suggestion = SearchSuggestion.find_by(term: @item.title.downcase)
+   def conversation_search1(word)
+        @search_suggestion = SearchSuggestion.find_by(term: @word.title.downcase)
         if @search_suggestion.present?
            @search_suggestion.increment!(:items_count)
         end  
@@ -34,6 +34,11 @@ class ConversationsController < ActiveController
     private
     def conversation_params
         params.permit(:sender_id, :reciepient_id)
+    end
+
+    # Search for word in a conversation
+    def conversation_search2
+        return @founded =  Conversations.search((params[:q].present ? params[:q] : '*' )).records
     end
 
 end

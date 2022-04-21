@@ -1,4 +1,8 @@
 class Conversation < ActiveRecord::Base
+
+    include Elasticsearch::Model
+    include Elasticsearch::Model::Callbacks
+
     belongs_to :sender, :foreign_key => :sender_id, class_name:  'User'
     belongs_to :reciepient, :foreign_key => :reciepient_id, class_name:  'User'
 
