@@ -2,7 +2,7 @@
 
 chat-system
 
-chat system that allows creating new  chatting application for each user.
+System that allows creating chatting application for each user.
 
 To run the App :
 
